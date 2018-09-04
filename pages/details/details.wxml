@@ -1,2 +1,28 @@
 <!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<view class='details'>
+  <view class='book-details'>
+    <view class='book-t'>
+      <image src='{{bookData.img}}' class='img'></image>
+      <view class='main-msg'>
+        <view class='title'>{{bookData.title}}</view>
+        <view class='author-name'>作者:{{bookData.author}}</view>
+        <view class='looknumbers'>{{bookData.looknums}}人在看</view>
+        <view class='likenumbers'>{{bookData.like_this_users.length}}人喜欢</view>
+      </view>
+    </view>
+    <view class='book-b'>
+      <button class='btn'>收藏</button>
+      <button class='btn'>分享好友</button>
+    </view>
+  </view>
+  <view class='book-desc'>
+    <view class='title'>简介</view>
+    <view class='desc-main'>{{bookData.desc}}</view>
+  </view>
+  <view class='book-catalog'>
+    <view class='title'>查看目录</view>
+    <view class='catalogs'>共94章</view>
+    <view class='update-time'>更新于两天前></view>
+  </view>
+  <button class='book-btn-wrap' bindtap=''>阅读书籍</button>
+</view>

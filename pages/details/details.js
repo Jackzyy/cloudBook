@@ -3,18 +3,22 @@ import { fetch } from '../../utils/util.js'
 
 Page({
   data: {
-    bookId:''
+    bookId:'',
+    bookData: {}
   },
   onLoad: function (options) {
     this.setData({
       bookId : options.id
     })
-    console.log(this.data.bookId)
+    // console.log(this.data.bookId)
     this.getData(options)
   },
   getData(options){
     fetch.get(`/book/${options.id}`).then(res => {
-      console.log(res)
+      this.setData({
+        bookData: res.data
+      })
+      // console.log(this.data.bookData)
     })
   }
 })
