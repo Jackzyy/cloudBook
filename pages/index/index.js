@@ -1,5 +1,6 @@
 //导入封装后GET方法
 import {fetch} from '../../utils/util.js'
+import Component from '../../wemark/wemark.js'
 
 //获取应用实例
 const app = getApp();
@@ -11,7 +12,8 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    isLoading: false
   },
   onLoad() {
     this.getData(),
@@ -20,11 +22,20 @@ Page({
 
   //轮播图数据请求
   getData() {
+    console.log(Component)
+    this.setData({
+      isLoading: true
+    }),
     fetch.get('/swiper').then(res => {
       this.setData({
-        imgUrls: res.data
+        imgUrls: res.data,
+        isLoading: false
       })
       // console.log(this.data.imgUrls)
+    }).catch(err => {
+      this.setData({
+        isLoading: false
+      })
     })
   },
 

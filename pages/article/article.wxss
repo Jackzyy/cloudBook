@@ -1,0 +1,28 @@
+/* pages/article/article.wxss */
+
+.article {
+  padding: 0 10px;
+  margin-bottom: 65rpx;
+}
+
+.article .footer{
+  width: 100%;
+  padding: 5px 0;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.article .footer .iconfont{
+  display: flex;
+  justify-content: space-between;
+}
+
+.article .footer .iconfont image {
+  font-size: 44rpx;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 100rpx;
+  text-align: center;
+}

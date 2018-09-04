@@ -1,1 +1,18 @@
 /* pages/catalog/catalog.wxss */
+
+.catalog {
+  height: 60rpx;
+  width: 100%;
+  display: block;
+  border-bottom: 1rpx solid #000;
+  padding: 5px 20px
+}
+
+.catalog .title {
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+.catalog:active{
+  background-color: #eee
+}

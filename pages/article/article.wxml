@@ -1,0 +1,14 @@
+<!--pages/article/article.wxml-->
+<view class='article'>
+  <image src='../../static/img/Ellipsis-1s-200px.svg' wx:if="{{isLoading}}" class='transition'></image>
+  <wemark md="{{article.article.content}}" link highlight="true" type="wemark" ></wemark>
+  <view class='footer'>
+    <view class='iconfont'>
+      <image src='../../static/iconfont/返回1.svg'></image>
+      <image src='../../static/iconfont/Tabulation.svg'></image>
+      <image src='../../static/iconfont/字体加大.svg'></image>
+      <image src='../../static/iconfont/字体减小.svg'></image>
+      <image src='../../static/iconfont/返回2.svg'></image>
+    </view>
+  </view>
+</view>

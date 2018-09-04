@@ -1,2 +1,5 @@
 <!--pages/catalog/catalog.wxml-->
-<text>pages/catalog/catalog.wxml</text>
+<image src='../../static/img/Ellipsis-1s-200px.svg' wx:if="{{isLoading}}" class='transition'></image>
+<view class='catalog' wx:for="{{catalog}}" wx:key="{{idnex}}">
+  <view class='title' bindtap='jumpArticle' id='{{item._id}}'>{{item.title}}</view>
+</view>

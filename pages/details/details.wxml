@@ -1,5 +1,6 @@
 <!--pages/details/details.wxml-->
 <view class='details'>
+  <image src='../../static/img/Ellipsis-1s-200px.svg' wx:if="{{isLoading}}" class='transition'></image>
   <view class='book-details'>
     <view class='book-t'>
       <image src='{{bookData.img}}' class='img'></image>
@@ -24,5 +25,5 @@
     <view class='catalogs'>共94章</view>
     <view class='update-time'>更新于两天前></view>
   </view>
-  <button class='book-btn-wrap' bindtap=''>阅读书籍</button>
+  <button class='book-btn-wrap' bindtap="jumpBook" id="{{bookData._id}}">阅读书籍</button>
 </view>

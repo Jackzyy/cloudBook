@@ -2,11 +2,11 @@
 const baseUrl = 'https://m.yaojunrong.com';
 
 const fetch = {
-  http (url, method, data){
+  http(url, method, data) {
     //返回一个new Promise对象
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
       wx.request({
-        url:baseUrl+url,
+        url: baseUrl + url,
         data,
         method,
         success: function(res) {
@@ -18,7 +18,7 @@ const fetch = {
       })
     })
   },
-  get(url, data){
+  get(url, data) {
     return this.http(url, 'GET', data)
   }
 }

@@ -1,8 +1,9 @@
 <view class='container index'>
+  <image src='../../static/img/Flickr-1s-200px.svg' wx:if="{{isLoading}}" class='transition'></image>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-      <swiper-item  bindtap="jumpBook" id="{{item.book._id}}">
-        <image src="{{item.img}}" class="slide-image"/>
+      <swiper-item bindtap="jumpBook" id="{{item.book._id}}">
+        <image src="{{item.img}}" class="slide-image" />
       </swiper-item>
     </block>
   </swiper>
