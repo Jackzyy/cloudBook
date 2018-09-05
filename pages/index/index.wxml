@@ -12,7 +12,7 @@
   <view class='main-content'>
     <view class='content-item' wx:for='{{mainContent}}' wx:key='{{index}}'>
       <view class='title'>{{item.title}}</view>
-      <view class='content' wx:for='{{item.books}}' wx:key='{{index}}'>
+      <view class='content' bindtap="jumpBook" id="{{item._id}}" wx:for='{{item.books}}' wx:key='{{index}}'>
         <view class='box-l'>
           <image src='{{item.img}}' class='img'></image>
         </view>

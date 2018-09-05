@@ -98,7 +98,7 @@ Page({
       this.setData({
         catalog: res.data
       })
-      console.log('catalog_res', this.data.catalog)
+      // console.log('catalog_res', this.data.catalog)
     })
   },
 

@@ -6,6 +6,10 @@
   height: 350rpx;
 }
 /* 主体内容样式 */
+.content:active{
+  background-color: #f1f1f1
+}
+
 .content-item{
   margin-top: 40rpx;
 }

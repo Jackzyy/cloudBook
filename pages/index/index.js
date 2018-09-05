@@ -40,7 +40,7 @@ Page({
 
   //主体内容请求
   getContent() {
-    fetch.get('/category/books').then(res => {
+    fetch.get('/category/books?size=6').then(res => {
       this.setData({
         mainContent: res.data
       })
