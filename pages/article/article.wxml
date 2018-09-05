@@ -1,14 +1,20 @@
 <!--pages/article/article.wxml-->
-<view class='article'>
+<view class='article' style='font-size:{{fontsize}}rpx'>
   <image src='../../static/img/Ellipsis-1s-200px.svg' wx:if="{{isLoading}}" class='transition'></image>
-  <wemark md="{{article.article.content}}" link highlight="true" type="wemark" ></wemark>
+  <wemark md="{{article.article.content}}" link highlight="true" type="wemark"></wemark>
   <view class='footer'>
     <view class='iconfont'>
-      <image src='../../static/iconfont/返回1.svg'></image>
-      <image src='../../static/iconfont/Tabulation.svg'></image>
-      <image src='../../static/iconfont/字体加大.svg'></image>
-      <image src='../../static/iconfont/字体减小.svg'></image>
-      <image src='../../static/iconfont/返回2.svg'></image>
+      <image src='../../static/iconfont/返回1.svg' bindtap='pageUp'></image>
+      <image src='../../static/iconfont/Tabulation.svg' bindtap='isShow'></image>
+      <image src='../../static/iconfont/字体加大.svg' bindtap='changeSizeUp'></image>
+      <image src='../../static/iconfont/字体减小.svg' bindtap='changeSizeDown'></image>
+      <image src='../../static/iconfont/返回2.svg' bindtap='pageDown'></image>
     </view>
   </view>
+  <scroll-view scroll-y class="catalog-menu {{isShow ? 'active': ''}}">
+    <view class="catalog-item" wx:for="{{catalog}}" wx:key="{{index}}" bindtap='handleGet' id='{{item._id}}'>
+      {{item.title}}
+    </view>
+  </scroll-view>
+  <view class="mask" wx:if="{{isShow}}" bindtap='isShow'></view>
 </view>

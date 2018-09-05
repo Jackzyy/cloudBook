@@ -27,7 +27,7 @@ Component({
     parsedData: {},
     richTextNodes: [],
   },
-
+ 
   methods: {
     parseMd() {
       if (this.data.md) {
@@ -71,20 +71,6 @@ Component({
   }
 });
 
-//点击设置字体大小
-const changeSize = {
-  changeSizeUp() {
-    console.log(this.data.fontsize)
-    this.setData({
-      fontsize: ++this.data.fontsize
-    })
-  },
-  changeSizeDown() {
-    console.log(this.data.fontsize)
-    this.setData({
-      fontsize: --this.data.fontsize
-    })
-  },
-}
 
-exports.changeSize = changeSize;
+
+

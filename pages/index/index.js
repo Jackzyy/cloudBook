@@ -22,7 +22,6 @@ Page({
 
   //轮播图数据请求
   getData() {
-    console.log(Component)
     this.setData({
       isLoading: true
     }),
