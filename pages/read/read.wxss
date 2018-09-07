@@ -3,7 +3,7 @@
 .book-main{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   height: 160px
 }
 
@@ -13,7 +13,8 @@
 }
 
 .book-main .book-main-l{
-  width: 225px
+  width: 225px;
+  margin-top:5px 
 }
 
 .book-main .book-main-l .title{

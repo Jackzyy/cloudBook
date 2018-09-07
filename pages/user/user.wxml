@@ -11,7 +11,7 @@
 </view>
 
 <view bindtap='jumpCollection'>
-  <button class='collect-book' bindtap='jumpCollection'>房东收藏的书</button>
+  <button class='collect-book'>{{user.nickName}}的书架</button>
 </view>
 
-<button class='btn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<button class='btn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信授权登录</button>

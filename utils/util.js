@@ -23,8 +23,8 @@ const fetch = {
         success: function(res) {
           // console.log(res.header.Token)
           resolve(res.data)
-          if(res.header.Token){
-            wx.setStorageSync('token', res.header.Token)
+          if (res.header.Token || res.header.token){
+            wx.setStorageSync('token', res.header.Token || res.header.token)
           }
         },
         fail: function(err) {

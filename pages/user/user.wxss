@@ -7,7 +7,7 @@
   width: 330px;
   height: 110px;
   border-radius: 40px;
-  margin: 20px 10px;
+  margin: 100px auto;
 }
 .header-top{
   display: flex;
@@ -54,5 +54,6 @@
   width: 180px;
   height: 50px;
   border-radius: 20px;
-  margin-top: 150px
+  margin-top: 80px;
+  background-color: green
 }

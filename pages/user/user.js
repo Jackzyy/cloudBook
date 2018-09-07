@@ -29,7 +29,6 @@ Page({
           })
         }else{
           self.setData({
-            user: res.userInfo,
             canIUse: true
           })
         }
