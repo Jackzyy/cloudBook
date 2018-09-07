@@ -79,7 +79,7 @@ Page({
   pageUp() {
     let catalog = this.data.catalog
     if (this.data.index - 1 < 0) {
-      console.log(this.data.index)
+      // console.log(this.data.index)
       wx.showToast({
         title: '已是第一章了哦'
       })

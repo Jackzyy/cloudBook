@@ -1,0 +1,68 @@
+/* pages/read/read.wxss */
+
+.book-main{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: 160px
+}
+
+.book-main image{
+  width: 230rpx;
+  height: 320rpx;
+}
+
+.book-main .book-main-l{
+  width: 225px
+}
+
+.book-main .book-main-l .title{
+  font-size: 14px;
+  color: #333;
+  font-weight: 700
+}
+
+.book-main .pro text{
+  font-size: 11px;
+  color: #BCBCBC;
+}
+
+.pro-bottom{
+  display: flex;
+  justify-content: space-between
+}
+
+.btn{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px
+}
+
+.btn button{
+  font-size: 13px;
+  line-height: 32px;
+  width: 100px;
+  height: 32px;
+}
+
+/* 下拉加载动画 */
+.loadmore {
+  margin: 40rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.loadmore image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.loadmore text {
+  line-height: 50rpx;
+  height: 50rpx;
+  padding-left: 20rpx;
+}
+

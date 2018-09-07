@@ -1,0 +1,17 @@
+<view class='personcenter container'>
+  <view class='header-top'>
+    <view class='header-img'>
+      <image src='{{user.avatarUrl}}'></image>
+    </view>
+    <view class='header-r'>
+      <view class='title'>{{user.nickName}}</view>
+      <view class='header-label'>签名： 诗和远方</view>
+    </view>
+  </view>
+</view>
+
+<view bindtap='jumpCollection'>
+  <button class='collect-book' bindtap='jumpCollection'>房东收藏的书</button>
+</view>
+
+<button class='btn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>

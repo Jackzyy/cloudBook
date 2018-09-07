@@ -8,7 +8,7 @@
     </block>
   </swiper>
 
-  <!-- 主题内容结构 -->
+  <!-- 主体内容结构 -->
   <view class='main-content'>
     <view class='content-item' wx:for='{{mainContent}}' wx:key='{{index}}'>
       <view class='title'>{{item.title}}</view>
@@ -24,12 +24,24 @@
           <view class='author'>
             <text class='author-l'>{{item.author}}</text>
             <view class='author-r'>
-              <text class='update-time'>2天前</text>
-              <text class='category'>后端开发</text>
-              <text class='many'>{{item.looknums}}</text>
+              <!-- <text class='update-time'>2天前 </text> -->
+              <!-- <text class='category'>{{}} </text> -->
+              <text class='many'>{{item.looknums}}人在看</text>
             </view>
           </view>
         </view>
+      </view>
+    </view>
+
+    <!-- Loding -->
+    <view wx:if="{{!isLoading}}">
+      <view wx:if="{{hasMore}}" class="loadmore">
+        <image src="/static/img/Ellipsis-1s-200px.svg"></image>
+        <text>数据正拼命加载中...</text>
+      </view>
+      <view wx:else="{{!hasMore}}" class="no-more">
+        <text>我是有底线的</text>
+        <text class="line"></text>
       </view>
     </view>
   </view>

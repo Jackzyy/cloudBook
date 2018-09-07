@@ -3,12 +3,37 @@
     "pages/index/index",
     "pages/details/details",
     "pages/catalog/catalog",
-    "pages/article/article"
+    "pages/article/article",
+    "pages/read/read",
+    "pages/user/user",
+    "pages/collection/collection"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "云书",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/iconfont/homepage.png",
+        "selectedIconPath": "/static/iconfont/homepage_fill.png"
+      },
+      {
+        "pagePath": "pages/read/read",
+        "text": "我的阅读",
+        "iconPath": "/static/iconfont/barrage.png",
+        "selectedIconPath": "/static/iconfont/barrage_fill.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/static/iconfont/people.png",
+        "selectedIconPath": "/static/iconfont/people_fill.png"
+      }
+    ]
   }
 }

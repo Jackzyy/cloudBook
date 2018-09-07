@@ -2,7 +2,7 @@
 
 .article {
   padding: 0 10px;
-  margin-bottom: 65rpx;
+  margin-bottom: 100rpx;
 }
 
 .article .footer{
@@ -34,7 +34,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  bottom: 90rpx;
+  bottom: 88rpx;
   background: #fff;
   border: 1px solid #f1f1f1;
   z-index: 996;

@@ -1,0 +1,28 @@
+<!--pages/read/read.wxml-->
+<view class='container' wx:if='{{isLogin}}'>
+  <view wx:if="{{isLoading}}" class="loadmore">
+    <image src="/static/img/Ellipsis-1s-200px.svg"></image>
+    <text>数据正拼命加载中...</text>
+  </view>
+  <view class='book-main' wx:for="{{bookData}}" wx:key="{{index}}">
+    <image src='{{item.book.img}}'></image>
+    <view class='book-main-l'>
+      <text class='title'>{{item.book.title}}</text>
+      <view class='pro'>
+        <text class='pro-top'>已阅{{item.title.index}}/{{item.title.total}}章节</text>
+        <view class='pro-center'>
+          <progress percent="{{item.percent}}" show-info />
+          <text>已看{{item.percent}}%</text>
+        </view>
+        <view class='pro-bottom'>
+          <text>上次查看: {{item.title.title}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <view class='btn'>
+          <button bindtap='jumpArticle' id='{{item.title._id}}' data-bookId="{{item.book._id}}">继续阅读</button>
+          <button bindtap='jumpBook' id='{{item.book._id}}'>查看文档</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
